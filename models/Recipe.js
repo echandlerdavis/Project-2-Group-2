@@ -33,6 +33,7 @@ Recipe.init(
                 key: 'id',
             },
         },
+        //consider adding an image field
     },
     {
         sequelize,
