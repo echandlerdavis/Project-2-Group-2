@@ -8,20 +8,13 @@ nav {
     opacity: 0.9;
 }
 
-body,
-::after,
-::before {
-  box-sizing: border-box !important;
-  padding: 0px !important;
-  margin: 0px !important;
-}
-
 body{
+    width:auto;
     background-image: url('../assets/vegetables\ copy.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-}
+    background-repeat: repeat-y;
+    background-size:cover;
+} 
+
 
 .bulma-overlay-mixin{
     opacity: 0.9;
