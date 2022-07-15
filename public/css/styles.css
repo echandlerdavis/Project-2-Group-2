@@ -9,10 +9,11 @@ nav {
 }
 
 body{
-    width:auto;
     background-image: url('../assets/vegetables\ copy.jpg'); 
-    background-repeat: repeat-y;
-    background-size:cover;
+    min-height:150vh;
+    background-size: auto;
+    background-size: cover;
+    background-position: fixed;
 } 
 
 
