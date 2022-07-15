@@ -19,7 +19,7 @@ const loginFormHandler = async (event) => {
         // If successful, redirect the browser to the profile page
         // TODO: set up the profile route in controllers/homeRoutes.js
         console.log('LOGGED IN - REDIRECTING TO PROFILE');
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }
