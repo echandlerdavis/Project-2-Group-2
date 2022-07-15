@@ -10,10 +10,9 @@ nav {
 
 body{
     background-image: url('../assets/vegetables\ copy.jpg'); 
-    min-height:150vh;
-    background-size: auto;
-    background-size: cover;
-    background-position: fixed;
+    min-height:1000vh;
+    margin:0;
+    background-attachment: fixed;
 } 
 
 
