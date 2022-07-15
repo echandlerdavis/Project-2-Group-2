@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recipe Saver</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
@@ -42,28 +42,30 @@
         <div class="field">
           <label class="label">Recipe Title</label>
           <div class="control">
-            <input class="input" type="text" placeholder="e.g. Grandma's Best Soup">
+            <input class="input" type="text" placeholder="e.g. Grandma's Best Soup" id="recipe-name" name="recipe-name">
           </div>
         </div>
       
         <div class="field">
           <label class="label">Ingredients</label>
           <div class="control">
-            <textarea class="textarea" type="text" placeholder="e.g. 1 bell pepper, 1 tsp sugar"></textarea>
+            <textarea class="textarea" type="text" placeholder="e.g. 1 bell pepper, 1 tsp sugar" id="ingredients" name="ingredients"></textarea>
           </div>
         </div>
 
         <div class="field">
             <label class="label">Instructions</label>
             <div class="control">
-              <textarea class="textarea" type="text" placeholder="e.g. In a medium bowl, combine..."></textarea>
+              <textarea class="textarea" type="text" placeholder="e.g. In a medium bowl, combine..." id="instructions" name="instructions"></textarea>
             </div>
           </div>
       
-        <button class="button is-primary">+ Add Recipe</button>
+        <button class="button is-primary" type="submit">+ Add Recipe</button>
       </form>
     </div>
 
   </section>
   </body>
+
+  <script src="./js/recipeForm.js"></script>
 </html>
