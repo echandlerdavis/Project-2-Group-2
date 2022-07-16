@@ -67,9 +67,10 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/add-recipes', withAuth, (req, res) => {
-
-  
-  res.render('newrecipe');
+ 
+  res.render('newrecipe', { 
+    logged_in: req.session.logged_in
+  });
 });
 
 module.exports = router;
