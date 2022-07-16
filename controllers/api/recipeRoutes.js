@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Recipe = require('../../models/Recipe');
+// const withAutH = require('../utils/auth');
 
 // GET all recipes
 router.get('/', async (req, res) => {
@@ -31,8 +32,12 @@ router.get('/:id', async (req, res) => {
 
   router.post('/', async (req, res) => {
     try {
-      const recipeData = await Recipe.create(req.body);
-      res.status(200).json(recipeData);
+      const newRecipe = await Recipe.create({
+        ...req.body,
+        user_id: req.session.user_id,
+      });
+  
+      res.status(200).json(newRecipe);
     } catch (err) {
       res.status(400).json(err);
     }
