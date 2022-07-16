@@ -30,7 +30,9 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Get all recipes and JOIN with user data
-    const recipeData = await Recipe.findByPk(req.session.user_id);
+    const recipeData = await Recipe.findAll({
+      where: { user_id: req.session.user_id}
+    });
 
     // Serialize data so the template can read it
     let recipes;
@@ -57,6 +59,12 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/add-recipes', withAuth, (req, res) => {
+
+  
+  res.render('newrecipe');
 });
 
 module.exports = router;
