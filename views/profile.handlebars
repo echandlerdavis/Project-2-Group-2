@@ -12,7 +12,9 @@
           </p>
         </header> 
         <footer class="card-footer">
-          <btn class="edit-btn">Edit</btn>
+          <a href="/api/update-recipes/{{recipe.id}}">
+            <btn class="edit-btn" data-edit-id="{{recipe.id}}">Edit</btn>
+          </a>
           {{!-- <a href="#" id="delete" class="delete-btn card-footer-item" data-id="{{recipe.id}}">Delete</a> --}}
           <btn class="delete-btn" data-id="{{recipe.id}}">Delete</btn>
         </footer>
@@ -24,9 +26,9 @@
 
     
 <footer class="columns is-centered is-mobile mt-5">     
-  <a href="/newrecipe">
+  <a href="/add-recipes">
     <button class="button is-primary is-light" id="add-recipe">Add Recipe</button>
   </a>
 </footer>
 
-<script src="./js/delete.js"></script>
+<script src="./js/deleteUpdate.js"></script>

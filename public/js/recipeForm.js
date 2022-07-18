@@ -4,8 +4,6 @@ const newFormHandler = async (event) => {
     const name = document.querySelector('#recipe-name').value.trim();
     const ingredients = document.querySelector('#ingredients').value.trim();
     const instructions = document.querySelector('#instructions').value.trim();
-
-    //do we want a .trim? 
   
     if (name && ingredients && instructions) {
       const response = await fetch(`/api/recipes`, {
@@ -19,8 +17,6 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         alert('New Recipe Created!');
         document.location.replace('/profile');
-        // is this right? I don't think i understand what it's replacing. maybe that's just clearing the page, 
-        //if it's just clearing the page maye we want it to go to the profile. 
       } else {
         alert('Failed to create new recipe');
       }
@@ -43,10 +39,6 @@ const newFormHandler = async (event) => {
 //     }
 //   };
   
-  document
-    .querySelector('.new-recipe-form')
-    .addEventListener('submit', newFormHandler);
-  
-//   document
-//     .querySelector('.project-list')
-//     .addEventListener('click', delButtonHandler);
+document
+  .querySelector('.new-recipe-form')
+  .addEventListener('submit', newFormHandler);
