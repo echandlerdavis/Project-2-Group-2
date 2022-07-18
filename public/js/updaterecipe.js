@@ -6,7 +6,7 @@ const recipeHandler = async (event) => {
   const instructions = document.querySelector('#recipe-instructions').value.trim();
   const recipeId = document.querySelector('#submit').getAttribute('data-id');
 
-  if (title && ingredients && instructions) {
+  if (recipeId && title && ingredients && instructions) {
     const response = await fetch(`/api/recipes/${recipeId}`, {
       method: 'PUT',
       body: JSON.stringify({ 
