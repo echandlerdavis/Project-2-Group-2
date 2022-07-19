@@ -1,13 +1,13 @@
 <div class="project-list">
   {{#each recipes as |recipe| }}
   <section class="columns">
-    <div class="card column m-5">
+    <div class="card column m-5" data-card-id="{{recipe.id}}">
       <div class="card-image" id="recipe-card">
         <figure class="image is-4by3">
-          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" data-card-id="{{recipe.id}}">
         </figure>
-        <header class="card-header">
-          <p class="card-header-title" id="recipe-name">
+        <header class="card-header" data-card-id="{{recipe.id}}">
+          <p class="card-header-title" id="recipe-name" data-card-id="{{recipe.id}}">
             {{recipe.name}}
           </p>
         </header> 
@@ -15,7 +15,6 @@
           <a href="/api/update-recipes/{{recipe.id}}">
             <btn class="edit-btn" data-edit-id="{{recipe.id}}">Edit</btn>
           </a>
-          {{!-- <a href="#" id="delete" class="delete-btn card-footer-item" data-id="{{recipe.id}}">Delete</a> --}}
           <btn class="delete-btn" data-id="{{recipe.id}}">Delete</btn>
         </footer>
       </div>
@@ -31,4 +30,4 @@
   </a>
 </footer>
 
-<script src="./js/deleteUpdate.js"></script>
+<script src="./js/cardHandler.js"></script>
