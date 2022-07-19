@@ -62,12 +62,19 @@ router.get('/:id', async (req, res) => {
 
   router.put('/:id', async (req, res) => {
     try {
-      const recipeData = await Recipe.update(req.body, {
-        where: {
-          ...req.body,
-          user_id: req.session.user_id,
+      console.log(req.params.id);
+      const recipeData = await Recipe.update(
+        {
+          name: req.body.name,
+          ingredients: req.body.ingredients,
+          instructions: req.body.instructions,
+        },
+        {
+          where: {
+            id: req.params.id,
+          }
         }
-      });
+      );
       res.status(200).json(recipeData);
     } catch (err) {
       res.status(400).json(err);

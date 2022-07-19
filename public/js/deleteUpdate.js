@@ -19,6 +19,16 @@ const delButtonHandler = async (event) => {
         }
     }
 
+    const recipeEditId = event.target.getAttribute('data-edit-id');
+
+    if (recipeEditId) {
+        // const recipeId = recipe.id;
+        console.log('editing');
+
+        // const response = await fetch(`/update-recipes/${recipeId}`)
+        document.location.replace(`/update-recipes/${recipeEditId}`);
+    }
+
 };
 
 document
