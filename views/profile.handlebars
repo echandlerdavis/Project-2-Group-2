@@ -3,7 +3,7 @@
     <div class="card column m-5" data-card-id="{{recipe.id}}">
       <div class="card-image" id="recipe-card">
          <figure class="image is-3by3" data-card-id="{{recipe.id}}">
-          <img src={{{get_icon}}}data-card-id="{{recipe.id}}">
+          <img src={{{get_icon}}} data-card-id="{{recipe.id}}">
           </figure>
         <header class="card-header" data-card-id="{{recipe.id}}">
           <p class="card-header-title" id="recipe-name" data-card-id="{{recipe.id}}">
@@ -26,7 +26,9 @@
     
 <footer>
        <div class="content has-text-centered">
-        <button class="button is-primary is-light">Add Recipe</button>
+         <a href="/add-recipes">
+         <button class="button is-primary is-light" id="add-recipe">Add Recipe</button>
+        </a>
         <p class="has-text-white">fruit icons PNG Designed By lancarrejekiamin from <a href="https://pngtree.com"> Pngtree.com</a></p>
       </div>
     </footer>
