@@ -22,8 +22,8 @@ module.exports = {
     } else if (randomNum > 0.1) {
       icon = "/images/Watermelon.png";}       
 
-     return icon;
-      
-    },
-   
-  };
+    return icon;
+    
+  },
+  
+};
