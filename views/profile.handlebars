@@ -1,34 +1,36 @@
-<div class="project-list">
+<div class="columns project-list">
   {{#each recipes as |recipe| }}
-  <section class="columns">
     <div class="card column m-5" data-card-id="{{recipe.id}}">
       <div class="card-image" id="recipe-card">
-        <figure class="image is-4by3">
-          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" data-card-id="{{recipe.id}}">
-        </figure>
+         <figure class="image is-3by3" data-card-id="{{recipe.id}}">
+          <img src={{{get_icon}}} data-card-id="{{recipe.id}}">
+          </figure>
         <header class="card-header" data-card-id="{{recipe.id}}">
           <p class="card-header-title" id="recipe-name" data-card-id="{{recipe.id}}">
             {{recipe.name}}
           </p>
         </header> 
         <footer class="card-footer">
-          <a href="/api/update-recipes/{{recipe.id}}">
-            <btn class="edit-btn" data-edit-id="{{recipe.id}}">Edit</btn>
+          <a href="/api/update-recipes/{{recipe.id}}" class="edit-btn card-footer-item" data-edit-id="{{recipe.id}}">
+            Edit
           </a>
-          <btn class="delete-btn" data-id="{{recipe.id}}">Delete</btn>
+          <a class="card-footer-item delete-btn" data-id="{{recipe.id}}">
+            Delete
+          </a>
         </footer>
       </div>
     </div>
-  </section>
   {{/each}}
 </div>
 
     
-<footer class="columns is-centered is-mobile mt-5">     
-  <a href="/add-recipes">
-    <button class="button is-primary is-light" id="add-recipe">Add Recipe</button>
-  </a>
-  <p>fruit icons PNG Designed By lancarrejekiamin from <a href="https://pngtree.com"> Pngtree.com</a></p>
-</footer>
+<footer>
+       <div class="content has-text-centered">
+         <a href="/add-recipes">
+         <button class="button is-primary is-light" id="add-recipe">Add Recipe</button>
+        </a>
+        <p class="has-text-white">fruit icons PNG Designed By lancarrejekiamin from <a href="https://pngtree.com"> Pngtree.com</a></p>
+      </div>
+    </footer>
 
 <script src="./js/cardHandler.js"></script>

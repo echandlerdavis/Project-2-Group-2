@@ -11,7 +11,7 @@ nav {
 body{
     background-image: url('../assets/vegetables\ copy.jpg'); 
     min-height:300vh;
-    max-height: 3000vh;
+    max-height: 100,000vh;
     background-size:cover;
     margin:0;
     background-attachment: fixed;
@@ -25,6 +25,7 @@ body{
 
 .card {
     opacity: 0.9;
+    max-width: 360px;
 }
 
 .box {
@@ -32,8 +33,6 @@ body{
     max-width:768px;
 }
 
-.card{
-    max-width:768px;
-}
+
 
 
