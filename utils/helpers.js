@@ -27,7 +27,8 @@ module.exports = {
     
         console.log('route:', icon);
         console.log('number', randomNum);
-      return `<img src=${icon} alt="food icon">`;
+        return icon;
+      // return `<img src=${icon} alt="food icon" data-card-id="{{recipe.id}}">`;
       
     },
    

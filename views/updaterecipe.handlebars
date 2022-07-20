@@ -1,10 +1,11 @@
+<section class="columns">
 <div class="column">
   <form class="box">
     <h2 class="title">Update Recipe</h2>
     <div class="field">
       <label class="label">Recipe Title</label>
       <div class="control">
-        <input class="input" type="text" id="recipe-title">{{recipe.name}}</input>
+        <input class="input" type="text" id="recipe-title" value="{{recipe.name}}">
       </div>
     </div>
   
@@ -25,5 +26,6 @@
     <button type="submit" class="button is-primary" id="submit" data-id="{{recipe.id}}">+ Update Recipe</button>
   </form>
 </div>
+</section>
 
 <script src="./../js/updateRecipe.js"></script>
