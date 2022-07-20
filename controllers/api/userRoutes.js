@@ -3,8 +3,6 @@ const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-      console.log('REQ BODY IS');
-      console.log(req.body);
       const userData = await User.create(req.body);
   
       req.session.save(() => {
@@ -12,7 +10,6 @@ router.post('/', async (req, res) => {
         req.session.logged_in = true;
   
         res.status(200).json(userData);
-        console.log('LOG IN INFO SAVED');
       });
     } catch (err) {
       res.status(400).json(err);
@@ -21,7 +18,6 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-      console.log('IN API/USERS/LOGIN ENDPOINT');
       const userData = await User.findOne({ where: { email: req.body.email } });
   
       if (!userData) {
@@ -44,7 +40,6 @@ router.post('/login', async (req, res) => {
         req.session.user_id = userData.id;
         req.session.logged_in = true;
         
-        console.log('LOGGED IN');
         res.json({ user: userData, message: 'You are now logged in!' });
       });
   

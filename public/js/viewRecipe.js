@@ -4,11 +4,8 @@ const recipeHandler = async (event) => {
   const recipeEditId = event.target.getAttribute('data-id');
 
   if (recipeEditId) {
-      // const recipeId = recipe.id;
-      console.log('editing');
 
-      // const response = await fetch(`/update-recipes/${recipeId}`)
-      document.location.replace(`/update-recipes/${recipeEditId}`);
+    document.location.replace(`/update-recipes/${recipeEditId}`);
   }
 };
   
