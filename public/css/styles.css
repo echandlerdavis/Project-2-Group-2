@@ -29,4 +29,11 @@ body{
 
 .box {
     opacity: 0.9;
+    max-width:768px;
 }
+
+.card{
+    max-width:768px;
+}
+
+
