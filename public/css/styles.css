@@ -25,12 +25,15 @@ body{
 
 .card {
     opacity: 0.9;
-    max-width: 360px;
+    margin: 1.5rem;
 }
 
 .box {
     opacity: 0.9;
-    max-width:768px;
+}
+
+#homepage {
+    max-width: 768px;
 }
 
 
