@@ -1,18 +1,29 @@
 <div class="column">
-  <form class="box">
-    <h2 class="title">Update Recipe</h2>
-    <div class="field">
-      <label class="label">Recipe Title</label>
-      <div class="control">
-        <input class="input" type="text" id="recipe-title">{{recipe.name}}</input>
-      </div>
-    </div>
-  
-    <div class="field">
-      <label class="label">Ingredients</label>
-      <div class="control">
-        <textarea class="textarea" type="text" id="recipe-ingredients">{{recipe.ingredients}}</textarea>
-      </div>
+      <form class="box">
+        <h2 class="title">Update Recipe</h2>
+        <div class="field">
+          <label class="label">Recipe Title</label>
+          <div class="control">
+            <input class="input" type="text" id="recipe-name">{{recipe.name}}</input>
+          </div>
+        </div>
+      
+        <div class="field">
+          <label class="label">Ingredients</label>
+          <div class="control">
+            <textarea class="textarea" type="text" id="recipe-ingredients">{{recipe.ingredients}}</textarea>
+          </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Instructions</label>
+            <div class="control">
+              <textarea class="textarea" type="text" id="recipe-instructions">{{recipe.instructions}}</textarea>
+            </div>
+          </div>
+      
+        <button type="submit" class="button is-primary">+ Update Recipe</button>
+      </form>
     </div>
 
     <div class="field">
