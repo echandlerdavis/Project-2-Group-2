@@ -12,7 +12,6 @@ router.delete('/:id', async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-    console.log(responseData);
     res.status(200).json(responseData);
   } catch (err) {
     res.status(500).json(err);
@@ -62,7 +61,6 @@ router.get('/:id', async (req, res) => {
 
   router.put('/:id', async (req, res) => {
     try {
-      console.log(req.params.id);
       const recipeData = await Recipe.update(
         {
           name: req.body.name,

@@ -6,7 +6,6 @@ const recipeHandler = async (event) => {
   const instructions = document.querySelector('#recipe-instructions').value.trim();
   const recipeId = document.querySelector('#submit').getAttribute('data-id');
 
-  console.log('right here')
   if (recipeId && title && ingredients && instructions) {
     const response = await fetch(`/api/recipes/${recipeId}`, {
       method: 'PUT',
@@ -19,7 +18,6 @@ const recipeHandler = async (event) => {
       },
     });
 
-    console.log('switching to profile')
     if (response.ok) {
       alert('Your recipe has been updated.')
       document.location.replace('/profile');

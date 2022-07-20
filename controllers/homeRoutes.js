@@ -17,8 +17,6 @@ router.get('/', withAuth, async (req, res) => {
     // Serialize data so the template can read it
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
-    console.log('session before rendering homepage')
-    console.log(req.session.logged_in)
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       recipes, 
@@ -44,8 +42,6 @@ router.get('/profile', withAuth, async (req, res) => {
       recipes = [recipeData.get({ plain: true })];
     }
     
-    console.log('session before rendering profile')
-    console.log(req.session.logged_in)
     // Pass serialized data and session flag into template
     res.render('profile', { 
       recipes,
