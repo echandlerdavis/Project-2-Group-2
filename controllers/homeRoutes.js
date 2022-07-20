@@ -93,4 +93,24 @@ router.get('/update-recipes/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/view-recipe/:id', withAuth, async (req, res) => {
+
+  const recipeId = req.params.id;
+
+  try {
+    const recipeDatum = await Recipe.findByPk(recipeId, {});
+
+    // Serialize data so the template can read it
+    recipe = recipeDatum.get({ plain: true });
+
+    // Pass serialized data and session flag into template
+    res.render('viewrecipe', { 
+      recipe, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
