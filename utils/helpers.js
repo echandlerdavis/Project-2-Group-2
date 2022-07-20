@@ -22,7 +22,7 @@ module.exports = {
     } else if (randomNum > 0.1) {
       icon = "/images/Watermelon.png";}       
 
-    return `<img src=${icon} alt="food icon">`;
+    return icon;
     
   },
   
